@@ -36,46 +36,33 @@
 			</div>
 		</div>
 		<div class="hero-visual">
-			<div class="hero-illustration">
-				<div class="ill-circle ill-circle-1"></div>
-				<div class="ill-circle ill-circle-2"></div>
-				<div class="ill-card">
-					<div class="ill-card-header">
-						<span class="ill-dot green"></span>
-						<span class="ill-dot yellow"></span>
-						<span class="ill-dot red"></span>
-					</div>
-					<div class="ill-stat">
-						<span class="ill-label">Sorting rate</span>
-						<span class="ill-value">72%</span>
-						<span class="ill-change">+18pp &#8593;</span>
-					</div>
-					<div class="ill-bar-wrap">
-						<div class="ill-bar-track">
-							<div class="ill-bar-fill" style="width:72%"></div>
-						</div>
-					</div>
-					<div class="ill-mini-stats">
-						<div class="ill-mini">
-							<span>Plastic</span>
-							<strong>+28%</strong>
-						</div>
-						<div class="ill-mini">
-							<span>Residual</span>
-							<strong>-9%</strong>
-						</div>
-						<div class="ill-mini">
-							<span>Tenants</span>
-							<strong>110</strong>
-						</div>
-					</div>
-				</div>
-				<div class="ill-carrot">
-					<svg width="80" height="80" viewBox="0 0 80 80">
-						<rect width="80" height="80" fill="#FF8736" style="clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);"/>
-						<text x="40" y="52" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="800" font-size="32" fill="white">C</text>
-					</svg>
-				</div>
+			<div class="hero-morph-wrap">
+				<div class="dot-pattern"></div>
+				<svg class="morph-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+					<!-- Fork / Trident -->
+					<path class="morph-shape" d="
+						M 170,40 L 170,10 L 180,10 L 180,60 L 190,60 L 190,10 L 210,10 L 210,60 L 220,60 L 220,10 L 230,10 L 230,40
+						L 240,70 L 240,140 L 230,160 L 220,160 L 220,440 L 218,448 L 210,456 L 190,456 L 182,448 L 180,440 L 180,160
+						L 170,160 L 160,140 L 160,70 Z
+					">
+						<animate
+							attributeName="d"
+							dur="12s"
+							repeatCount="indefinite"
+							values="
+								M 170,40 L 170,10 L 180,10 L 180,60 L 190,60 L 190,10 L 210,10 L 210,60 L 220,60 L 220,10 L 230,10 L 230,40 L 240,70 L 240,140 L 230,160 L 220,160 L 220,440 L 218,448 L 210,456 L 190,456 L 182,448 L 180,440 L 180,160 L 170,160 L 160,140 L 160,70 Z;
+								M 170,80 L 170,50 L 175,40 L 185,35 L 200,30 L 215,35 L 225,40 L 230,50 L 230,80 L 228,90 L 220,95 L 220,110 L 220,440 L 218,448 L 210,456 L 190,456 L 182,448 L 180,440 L 180,110 L 180,95 L 172,90 L 170,80 Z;
+								M 150,280 L 155,220 L 165,170 L 172,140 L 178,120 L 185,110 L 195,105 L 205,105 L 215,110 L 222,120 L 228,140 L 235,170 L 245,220 L 250,280 L 250,400 L 248,420 L 240,440 L 220,456 L 200,460 L 180,456 L 160,440 L 152,420 L 150,400 Z;
+								M 180,40 L 200,20 L 220,40 L 235,70 L 245,110 L 250,160 L 248,220 L 235,280 L 215,340 L 205,380 L 200,420 L 200,456 L 200,456 L 200,420 L 195,380 L 185,340 L 165,280 L 152,220 L 150,160 L 155,110 L 165,70 L 180,40 Z;
+								M 180,100 L 180,60 L 185,40 L 200,30 L 215,40 L 220,60 L 220,100 L 240,90 L 255,100 L 260,120 L 255,140 L 240,148 L 220,150 L 220,440 L 218,448 L 210,456 L 190,456 L 182,448 L 180,440 L 180,150 L 160,148 L 145,140 L 140,120 L 145,100 L 160,90 Z;
+								M 170,40 L 170,10 L 180,10 L 180,60 L 190,60 L 190,10 L 210,10 L 210,60 L 220,60 L 220,10 L 230,10 L 230,40 L 240,70 L 240,140 L 230,160 L 220,160 L 220,440 L 218,448 L 210,456 L 190,456 L 182,448 L 180,440 L 180,160 L 170,160 L 160,140 L 160,70 Z
+							"
+							keyTimes="0; 0.2; 0.4; 0.6; 0.8; 1"
+							calcMode="spline"
+							keySplines="0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1; 0.42 0 0.58 1"
+						/>
+					</path>
+				</svg>
 			</div>
 		</div>
 	</div>
@@ -453,137 +440,35 @@
 
 	.hero-visual {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		justify-content: center;
 	}
 
-	.hero-illustration {
+	.hero-morph-wrap {
 		position: relative;
-		width: 380px;
-		height: 440px;
-	}
-
-	.ill-circle {
-		position: absolute;
-		border-radius: 50%;
-		opacity: 0.2;
-	}
-
-	.ill-circle-1 {
-		width: 320px;
-		height: 320px;
-		background: var(--orange);
-		top: 20px;
-		right: -40px;
-	}
-
-	.ill-circle-2 {
-		width: 200px;
-		height: 200px;
-		background: var(--seaweed);
-		bottom: 20px;
-		left: -20px;
-	}
-
-	.ill-card {
-		position: absolute;
-		top: 40px;
-		left: 0;
-		right: 0;
-		background: var(--white);
-		border: 1.5px solid var(--black);
-		clip-path: var(--clip-corner-lg);
-		padding: 24px;
-		box-shadow: 6px 6px 0 var(--black);
-	}
-
-	.ill-card-header {
-		display: flex;
-		gap: 6px;
-		margin-bottom: 16px;
-	}
-
-	.ill-dot {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-	}
-
-	.ill-dot.green { background: #4caf50; }
-	.ill-dot.yellow { background: #ffc107; }
-	.ill-dot.red { background: #f44336; }
-
-	.ill-stat {
-		display: flex;
-		align-items: baseline;
-		gap: 10px;
-		margin-bottom: 12px;
-	}
-
-	.ill-label {
-		font-size: 12px;
-		color: var(--gray-5);
-		font-weight: 500;
-	}
-
-	.ill-value {
-		font-size: 32px;
-		font-weight: 800;
-		letter-spacing: -0.03em;
-	}
-
-	.ill-change {
-		font-size: 13px;
-		font-weight: 700;
-		color: #22c55e;
-		background: #dcfce7;
-		padding: 2px 8px;
-		border-radius: 20px;
-	}
-
-	.ill-bar-wrap {
-		margin-bottom: 16px;
-	}
-
-	.ill-bar-track {
-		height: 10px;
-		background: var(--gray-2);
-		clip-path: var(--clip-corner);
+		width: 420px;
+		height: 500px;
 		overflow: hidden;
 	}
 
-	.ill-bar-fill {
-		height: 100%;
-		background: var(--lime);
-		transition: width 1s ease;
-	}
-
-	.ill-mini-stats {
-		display: flex;
-		gap: 16px;
-	}
-
-	.ill-mini {
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-	}
-
-	.ill-mini span {
-		font-size: 11px;
-		color: var(--gray-5);
-	}
-
-	.ill-mini strong {
-		font-size: 15px;
-		font-weight: 700;
-	}
-
-	.ill-carrot {
+	.dot-pattern {
 		position: absolute;
-		bottom: 30px;
-		right: -10px;
-		transform: rotate(8deg);
+		inset: 0;
+		background-image: radial-gradient(circle, var(--black) 1.2px, transparent 1.2px);
+		background-size: 24px 24px;
+		opacity: 0.18;
+		z-index: 0;
+	}
+
+	.morph-svg {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+	}
+
+	.morph-shape {
+		fill: var(--black);
 	}
 
 	/* Features */
